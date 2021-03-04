@@ -1,0 +1,16 @@
+{
+    "name": "Math club",
+    "origin": "*",
+    "short_name": "math_club",
+    "methods": "GET,HEAD,PATCH,POST,PUT,DELETE",
+    "icons": [
+        {
+            "src": "math.jpg",
+            "sizes":"125x141" ,
+            "type": "image/jpg"
+        }
+    ],
+    "start-url": "math.html",
+    "display": "fullscreen",
+    "background-color": "#4234ed"
+}
