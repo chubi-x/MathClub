@@ -11,7 +11,7 @@
             "type": "image/jpg"
         }
     ],
-    "start-url": "math.html",
+    "start-url": "index.html",
     "display": "fullscreen",
     "background_color": "#4234ed"
 }

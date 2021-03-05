@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>After School Club</title>
+    <script src="https://unpkg.com/vue"></script>
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <link rel="manifest" href="mathclub.manifest">
+    <script>
+        if('ServiceWorker' in navigator){
+            navigator.serviceWorker.register('service-worker.js')
+        }
+    </script>
+</head>
+<body>
+    <div id='app'>
+        <header>
+            <h1 v-text="sitename"></h1>
+            <button v-on:click='showCheckout'>
+                {{ cartItemCount }}
+                <span class="fas fa-cart-plus"></span> Checkout
+            </button>
+        </header>
+        <main>
+            <div v-if='showProduct'>
+            
+            <figure>
+            <img v-bind:src="product.image">
+            </figure>
+            <h2 v-text="product.title"></h2>
+            <p v-html="product.description"></p>
+            <p>Price: {{product.price}}</p>
+            <p>Number of spaces: {{product.availableInventory - cartItemCount}}</p>
+            <button v-on:click='addToCart' v-if='canAddToCart'>Add to cart</button>
+            <button disabled="disabled" v-else>Add to cart</button>
+
+            </div>
+            <div v-else>
+                <h2>Checkout</h2>
+            </div>
+        </main>
+    </div>
+
+    <script type="text/javascript">
+        var webstore = new Vue({
+            el: '#app',
+            data: {
+                sitename:'After School Club',
+                product: {
+                    id: 1001,
+                    title:"Math",
+                    description:"London",
+                    price: 100,
+                    image:"math.jpg",
+                    availableInventory: 5,
+                },
+                cart:[],
+                showProduct: true
+            },
+            methods: {
+                addToCart() {
+                    this.cart.push(this.product.id);
+                },
+                showCheckout() {
+                    this.showProduct = this.showProduct ? false : true;
+                },
+            },
+            computed: {
+                cartItemCount() {
+                    return this.cart.length || '';
+                },
+                canAddToCart: function() {
+                    return this.product.availableInventory > this.cartItemCount;
+                }
+            },
+        });
+    </script>
+    
+</body>
+</html>

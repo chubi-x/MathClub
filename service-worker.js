@@ -1,6 +1,6 @@
 var cacheName = 'mathclubv1';
 var cacheFiles = [
-    'math.html',
+    'index.html',
     'math.jpg',
     'mathclub.webmanifest'
 ];
