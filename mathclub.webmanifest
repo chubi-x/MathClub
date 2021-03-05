@@ -6,12 +6,12 @@
     "description" : "group lab task pwa",
     "icons": [
         {
-            "src": "math.jpg",
-            "sizes":"125x141" ,
-            "type": "image/jpg"
+            "src": "/math.png",
+            "sizes":"125x125" ,
+            "type": "image/png"
         }
     ],
-    "start-url": "index.html",
+    "start_url": "index.html",
     "display": "fullscreen",
     "background_color": "#4234ed"
 }

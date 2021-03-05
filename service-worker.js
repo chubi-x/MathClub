@@ -2,6 +2,7 @@ var cacheName = 'mathclubv1';
 var cacheFiles = [
     'index.html',
     'math.jpg',
+    'math.png',
     'mathclub.webmanifest'
 ];
 self.addEventListener('install',(e)=>{
