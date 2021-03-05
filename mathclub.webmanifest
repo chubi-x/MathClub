@@ -6,7 +6,7 @@
     "description" : "group lab task pwa",
     "icons": [
         {
-            "src": "/math.png",
+            "src": "math.png",
             "sizes":"125x125" ,
             "type": "image/png"
         }
