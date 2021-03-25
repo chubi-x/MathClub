@@ -6,8 +6,8 @@
     "description" : "group lab task pwa",
     "icons": [
         {
-            "src": "math.png",
-            "sizes":"125x125" ,
+            "src": "icon-store-512.png",
+            "sizes":"512x512" ,
             "type": "image/png"
         }
     ],

@@ -3,6 +3,7 @@ var cacheFiles = [
     'index.html',
     'math.jpg',
     'math.png',
+    "icon-store-512.png",
     'mathclub.webmanifest'
 ];
 self.addEventListener('install',(e)=>{
